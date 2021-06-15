@@ -32,7 +32,7 @@ export class DoacaoPage implements OnInit {
   
   getData() {
     // dados obtidos de alguma API
-    this.modelData.totalDoacao += Math.random();
+    this.modelData.totalDoacao += Math.random()*6;
     this.httpClient.get<[]>("/nomes/5").subscribe(data => {
       this.modelData.doadores = data;
     });
