@@ -31,7 +31,7 @@ export class HomePage {
       }else{
         let alert = this.alertCtrl.create({
           header:'Aviso',
-          message:'Nenhum painel disponpivel para o estabelecimento: '+ params.idestab,
+          message:'Nenhum painel disponível para o estabelecimento: '+ params.idestab,
           buttons: ['OK']
         });
         (await alert).present();
