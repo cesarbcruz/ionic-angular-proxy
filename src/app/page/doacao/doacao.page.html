@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      CAMPANHA SALVE MEU BOLSO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Doações</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-label class="my-label" position="stacked">Doações da Loja: {{this.modelData.idEstab}}</ion-label>
+    <ion-input readonly class="my-value">{{this.modelData.totalDoacao | currency:'':''}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-list>
+      <ion-list-header class="my-label">
+        Últimos doadores:
+      </ion-list-header>
+      <ion-item *ngFor="let doador of this.modelData.doadores">
+        <ion-label class="my-item">{{doador}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-item>
+</ion-content>

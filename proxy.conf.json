@@ -1,0 +1,8 @@
+{
+    "/nomes/*": {
+      "target": "http://gerador-nomes.herokuapp.com",
+      "changeOrigin": true,
+      "secure": false,
+      "logLevel": "debug"
+    }
+  }
